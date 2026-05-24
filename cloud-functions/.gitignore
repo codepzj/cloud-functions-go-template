@@ -1,0 +1,22 @@
+# mac
+.DS_Store
+
+.vscode
+
+
+# 开发配置
+.env
+
+# 日志
+logs/
+*.log
+
+# 临时文件
+tmp/
+*.tmp
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+  
