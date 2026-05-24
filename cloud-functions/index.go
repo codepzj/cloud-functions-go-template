@@ -1,14 +1,14 @@
 package main
 
 import (
+	"cloud-functions/conf"
+	"cloud-functions/internal/handler"
+	"cloud-functions/internal/service"
+	"cloud-functions/pkg/database"
+	"cloud-functions/pkg/logger"
 	"fmt"
 	"os"
 	"os/signal"
-	"server/conf"
-	"server/internal/handler"
-	"server/internal/service"
-	"server/pkg/database"
-	"server/pkg/logger"
 	"syscall"
 
 	"github.com/gin-gonic/gin"

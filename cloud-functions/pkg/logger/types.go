@@ -34,8 +34,6 @@ func defaultOption() *Option {
 		Level:  "debug",
 		Output: &OutputConfig{
 			EnableFile: false,
-			FilePath:   "./logs/server.log",
-			MaxAge:     3,
 		},
 	}
 }
@@ -57,14 +55,6 @@ func withDefault(opt *Option) *Option {
 
 	if opt.Output != nil {
 		def.Output.EnableFile = opt.Output.EnableFile
-
-		if opt.Output.FilePath != "" {
-			def.Output.FilePath = opt.Output.FilePath
-		}
-
-		if opt.Output.MaxAge > 0 {
-			def.Output.MaxAge = opt.Output.MaxAge
-		}
 	}
 
 	return def

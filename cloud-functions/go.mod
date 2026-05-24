@@ -1,4 +1,4 @@
-module server
+module cloud-functions
 
 go 1.24.0
 

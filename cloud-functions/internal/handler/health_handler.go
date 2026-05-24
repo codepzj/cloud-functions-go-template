@@ -1,8 +1,8 @@
 package handler
 
 import (
+	"cloud-functions/internal/service"
 	"net/http"
-	"server/internal/service"
 
 	"github.com/gin-gonic/gin"
 )

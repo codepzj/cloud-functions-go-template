@@ -3,7 +3,7 @@ package conf
 import (
 	"log"
 
-	"server/pkg/logger"
+	"cloud-functions/pkg/logger"
 
 	"github.com/caarlos0/env/v11"
 	"github.com/subosito/gotenv"

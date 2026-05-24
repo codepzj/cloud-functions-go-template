@@ -4,8 +4,8 @@ import (
 	"errors"
 	"net/http"
 
-	"server/internal/model"
-	"server/pkg/logger"
+	"cloud-functions/internal/model"
+	"cloud-functions/pkg/logger"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"

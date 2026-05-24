@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"server/pkg/logger"
+	"cloud-functions/pkg/logger"
 
 	"go.uber.org/zap"
 	"gorm.io/driver/postgres"

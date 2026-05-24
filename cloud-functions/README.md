@@ -1,3 +1,3 @@
-# gin-template
+# cloud-functions
 
-一个gin模版
+edgeone云函数
