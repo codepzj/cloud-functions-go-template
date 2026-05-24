@@ -13,20 +13,7 @@ var cfg Config
 
 type Config struct {
 	Port     int      `env:"PORT" envDefault:"2574"`
-	Postgres Postgres `envPrefix:"POSTGRES_"`
 	Log      Log      `envPrefix:"LOG_"`
-}
-
-type Postgres struct {
-	Host             string `env:"HOST,required"`
-	User             string `env:"USER,required"`
-	Password         string `env:"PASSWORD,required"`
-	DBName           string `env:"DBNAME,required"`
-	Port             int    `env:"PORT" envDefault:"5432"`
-	SSLMode          string `env:"SSLMODE" envDefault:"disable"`
-	TimeZone         string `env:"TIMEZONE" envDefault:"Asia/Shanghai"`
-	SlowSqlThreshold int    `env:"SLOW_SQL_THRESHOLD" envDefault:"200"`
-	LogLevel         string `env:"LOG_LEVEL" envDefault:"info"`
 }
 
 type Log struct {

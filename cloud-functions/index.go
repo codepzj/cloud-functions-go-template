@@ -30,25 +30,13 @@ func main() {
 		},
 	})
 	defer logger.Sync()
-	// 初始化数据库
-	_ = database.NewPgSQL(&database.PgSQLOptions{
-		Host:             config.Postgres.Host,
-		User:             config.Postgres.User,
-		Password:         config.Postgres.Password,
-		DBName:           config.Postgres.DBName,
-		Port:             config.Postgres.Port,
-		SSLMode:          config.Postgres.SSLMode,
-		TimeZone:         config.Postgres.TimeZone,
-		SlowSqlThreshold: config.Postgres.SlowSqlThreshold,
-		LogLevel:         config.Postgres.LogLevel,
-	})
 
 	healthSvc := service.NewHealthService()
 	healthHandler := handler.NewHealthHandler(healthSvc)
 
 	// 注册路由
 	r := gin.Default()
-	r.GET("/health", healthHandler.Health)
+	r.GET("/api/health", healthHandler.Health)
 
 	go func() {
 		r.Run(fmt.Sprintf(":%d", config.Port))
